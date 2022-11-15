@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background: black;
+  padding-top: 1rem;
+  font-family: "Roboto Slab", serif;
+}
+
+.mainSection {
+  margin-top: 10%;
+  background: white;
+  width: 50%;
+  margin: auto;
+}
+.mainSection form {
+  padding: 1.5rem 2rem;
+}
+.mainSection form .inputDiv {
+  outline: none;
+  border: 0;
+  border: 1px solid #ddd;
+  padding: 0;
+  border-radius: 0.4rem;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 1.1rem;
+  background-color: rgba(221, 221, 221, 0.059);
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+.mainSection form .inputDiv input {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.mainSection form .inputDiv .inputMiddleBtn {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.614);
+  background-color: rgba(221, 221, 221, 0.77);
+  padding: 8px 10px;
+  border-radius: 20px;
+  position: absolute;
+  top: 7px;
+  margin-left: 1rem;
+}
+.mainSection form .inputStyle {
+  outline: none;
+  border: 0;
+  border: 1px solid #ddd;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 1.1rem;
+  background-color: rgba(221, 221, 221, 0.059);
+}
+.mainSection form label {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.614);
+}
+.mainSection form .dateContent .dateHeading {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.614);
+  margin-top: 3px;
+  margin-bottom: 0.8rem;
+}
+.mainSection form .dateContent .dateBtn {
+  background: transparent;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px dotted black;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.568);
+}
+.mainSection form .dateContent .dateIcon {
+  margin: 0 6px;
+}
+.mainSection form .lastContent {
+  margin-bottom: 1rem;
+  margin-top: 1.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainSection form .lastContent .selectStarted {
+  color: rgba(0, 0, 255, 0.585);
+}
+.mainSection form .lastContent .selectTemplate {
+  display: flex;
+}
+.mainSection form .lastContent .selectTemplate .selectItem {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.614);
+  margin-left: 1rem;
+}
+.mainSection form .lastContent .templateHeading {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.614);
+}
+.mainSection form .lastContent .addBtn {
+  display: flex;
+}
+.mainSection form .lastContent .addBtn .cancleBtn {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.614);
+  border: none;
+  outline: none;
+  background: transparent;
+  margin: 0 1rem;
+}
+.mainSection form .lastContent .addBtn .addTaskBtn {
+  border: none;
+  outline: none;
+  padding: 0.8rem 1.3rem;
+  background: rgb(245, 76, 46);
+  font-weight: bold;
+  border-radius: 5px;
+  color: antiquewhite;
+}
+
+@media (max-width: 1024px) {
+  .mainSection {
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  .mainSection {
+    width: 90%;
+  }
+  .mainSection form {
+    padding: 1.5rem 1rem;
+  }
+  .mainSection form .lastContent {
+    justify-content: center;
+  }
+  .mainSection form .lastContent .selectStarted {
+    text-align: left;
+    margin-right: 1rem;
+  }
+  .mainSection form .lastContent .addBtn {
+    margin-top: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

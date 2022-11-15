@@ -1,0 +1,185 @@
+
+//--------import google font -------------
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap');
+
+
+//--------Browser Reset Code-------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background: black;
+  padding-top: 1rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+//--------declare variables for responsive-------------
+
+$small-width: 480px;
+$medium-width: 768px;
+$large-width: 1024px;
+
+//--------declare variables for style-------------
+
+$labelText-color:rgba(0, 0, 0, 0.614);
+$labelText-size:13px;
+$inputBorder-color: #ddd;
+
+//--------@mixin style -------------
+@mixin labelStyle{
+    font-size: $labelText-size;
+    color: $labelText-color;
+}
+@mixin inputStyle($customPadding){
+            outline: none;
+            border: 0;
+            border: 1px solid $inputBorder-color;
+            padding: $customPadding;
+            border-radius: .4rem;
+            width: 100%;
+            margin-top: 8px;
+            margin-bottom: 1.1rem;
+            background-color: rgba(221, 221, 221, 0.059);
+}
+
+//---------- Form style -------------
+.mainSection{
+    margin-top: 10%;
+    background: white;
+    width: 50%;
+    margin: auto;
+    
+     form{
+        padding: 1.5rem 2rem;
+        .inputDiv{
+            @include inputStyle(0);
+            position: relative;
+            height: 50px;
+            overflow: hidden;
+
+            input{
+                width: 100%;
+                height:100%;
+                border: none;
+            };
+            .inputMiddleBtn{
+                @include labelStyle;
+                background-color: rgba(221, 221, 221, 0.77);
+                padding: 8px 10px;
+                border-radius: 20px;
+                position: absolute;
+                top: 7px;
+                margin-left: 1rem;
+            }
+        }
+        
+        .inputStyle{
+            @include inputStyle(.8rem 1rem);
+            
+        };
+        label{
+           @include labelStyle;
+        };
+        .dateContent{
+            .dateHeading{
+                @include labelStyle;
+                margin-top: 3px;
+                margin-bottom :.8rem;
+            };
+            .dateBtn{
+                background: transparent;
+                padding: 8px;
+                font-size: 12px;
+                font-weight: bold;
+                border: 1px dotted black;
+                border-radius: 20px;
+                margin-bottom: 1rem;
+                color: rgba(0, 0, 0, 0.568);
+            }
+            .dateIcon{
+                margin:0 6px;
+
+            };
+
+        };
+        .lastContent{
+            margin-bottom: 1rem;
+            margin-top: 1.3rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            .selectStarted{
+                color: rgba(0, 0, 255, 0.585)
+            };
+            .selectTemplate{
+                display: flex;
+
+                .selectItem{
+                    @include labelStyle;
+                    margin-left: 1rem;
+                };
+
+            };
+            .templateHeading{
+               @include labelStyle;
+            };
+            .addBtn{
+                display: flex;
+                .cancleBtn{
+                    @include labelStyle;
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    margin: 0 1rem;
+                    
+                }
+                .addTaskBtn{
+                    border: none;
+                    outline: none;
+                    padding: .8rem 1.3rem;
+                    background: rgb(245, 76, 46);
+                    font-weight: bold;
+                    border-radius: 5px;
+                    color: antiquewhite;
+                };
+            };
+            
+        };
+       
+     };
+};
+
+
+////--------------------responsive......................
+
+
+@media  (max-width:$large-width) {
+
+    .mainSection{
+        width: 80%;
+    }
+}
+@media  (max-width:$small-width) {
+    .mainSection{
+        width: 90%;
+        form{
+            padding: 1.5rem 1rem;
+            .lastContent{
+                justify-content: center;
+                .selectStarted{
+                    text-align: left;
+                    margin-right: 1rem;
+                }
+                .addBtn{
+                    margin-top: 1rem;
+                }
+            };
+        };
+    };
+};
